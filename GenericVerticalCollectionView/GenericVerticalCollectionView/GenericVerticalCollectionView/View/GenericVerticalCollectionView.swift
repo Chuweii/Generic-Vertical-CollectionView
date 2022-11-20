@@ -24,15 +24,14 @@ class GenericVerticalCollectionView< T , Cell:UICollectionViewCell >: UICollecti
         self.selecedHandler = selecedHandler
         self.items = items
 //        self.id = id
-        
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.itemSize = CGSize(width: width, height: height)
-        layout.minimumInteritemSpacing = 1
-        layout.minimumLineSpacing = 1
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         
         super.init(frame: .zero, collectionViewLayout: layout)
         
+//        self.translatesAutoresizingMaskIntoConstraints = false
         self.register(GameCollectionViewCell.self, forCellWithReuseIdentifier: GameCollectionViewCell.identifier)
         self.dataSource = self
         self.delegate = self

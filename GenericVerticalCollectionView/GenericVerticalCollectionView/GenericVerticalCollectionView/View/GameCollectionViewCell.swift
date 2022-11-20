@@ -13,19 +13,18 @@ class GameCollectionViewCell: UICollectionViewCell {
     
     //MARK: Element
     
-    private lazy var gameLabel: UILabel = {
+    private let gameLabel: UILabel = {
        
         lazy var label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .systemFont(ofSize: 21, weight: .light)
         label.textAlignment = .center
-//        label.textColor = .
         label.text = "Weber"
         
         return label
     }()
     
-    private lazy var gameImageView: UIImageView = {
+    private let gameImageView: UIImageView = {
        
         lazy var image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -35,7 +34,7 @@ class GameCollectionViewCell: UICollectionViewCell {
         return image
     }()
     
-    private lazy var cornerImageView: UIImageView = {
+    private let cornerImageView: UIImageView = {
        
         lazy var image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -43,6 +42,16 @@ class GameCollectionViewCell: UICollectionViewCell {
         image.backgroundColor = .green
         
         return image
+    }()
+    
+    private let button: UIButton = {
+       
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setImage(UIImage(systemName: "chevron.forward"), for: .normal)
+    
+        
+        return button
     }()
 
     
@@ -66,36 +75,47 @@ class GameCollectionViewCell: UICollectionViewCell {
     //MARK: Set View & Autolayout
     
     private func setView () {
+        self.backgroundColor = .lightGray
         contentView.addSubview(gameLabel)
         contentView.addSubview(gameImageView)
         contentView.addSubview(cornerImageView)
+        contentView.addSubview(button)
     }
  
     private func setConstraints () {
         let gameLabelConstraints = [
             gameLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             gameLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-            gameLabel.widthAnchor.constraint(equalToConstant: 100),
-            gameLabel.heightAnchor.constraint(equalToConstant: 50)
+            gameLabel.widthAnchor.constraint(equalToConstant: contentView.frame.size.width / 3),
+            gameLabel.heightAnchor.constraint(equalToConstant: contentView.frame.size.width / 3)
             
         ]
         
         let gameImageViewConstraints = [
             gameImageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-            gameImageView.trailingAnchor.constraint(equalTo: gameLabel.leadingAnchor, constant: -10),
-            gameImageView.widthAnchor.constraint(equalToConstant: 20),
-            gameImageView.heightAnchor.constraint(equalToConstant: 20)
+            gameImageView.trailingAnchor.constraint(equalTo: gameLabel.leadingAnchor, constant: -5),
+            gameImageView.widthAnchor.constraint(equalToConstant: contentView.frame.size.width / 3 - 20),
+            gameImageView.heightAnchor.constraint(equalToConstant: contentView.frame.size.width / 3 - 20)
         ]
         // layout元件繼續
         let cornerImageViewConstraints = [
-            cornerImageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-            cornerImageView.trailingAnchor.constraint(equalTo: gameLabel.leadingAnchor, constant: -10),
-            cornerImageView.widthAnchor.constraint(equalToConstant: 20),
-            cornerImageView.heightAnchor.constraint(equalToConstant: 20)
+            cornerImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0),
+            cornerImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 0),
+            cornerImageView.widthAnchor.constraint(equalToConstant: 30),
+            cornerImageView.heightAnchor.constraint(equalToConstant: 30)
+        ]
+        
+        let buttonConstraints = [
+            button.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            button.leadingAnchor.constraint(equalTo: gameLabel.trailingAnchor, constant: 7),
+            button.widthAnchor.constraint(equalToConstant: 40),
+            button.heightAnchor.constraint(equalToConstant: 40)
         ]
         
         NSLayoutConstraint.activate(gameLabelConstraints)
         NSLayoutConstraint.activate(gameImageViewConstraints)
+        NSLayoutConstraint.activate(cornerImageViewConstraints)
+        NSLayoutConstraint.activate(buttonConstraints)
     }
     
     //MARK: Public Function
