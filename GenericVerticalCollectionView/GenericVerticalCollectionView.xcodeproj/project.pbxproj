@@ -92,26 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				B2295FC0292928CE00B25996 /* View */,
-				B2295FB62928FD5300B25996 /* Model */,
-				B2295FB32928FD4B00B25996 /* View Model */,
 			);
 			path = GenericVerticalCollectionView;
-			sourceTree = "<group>";
-		};
-		B2295FB32928FD4B00B25996 /* View Model */ = {
-			isa = PBXGroup;
-			children = (
-				B2295FB42928FD4B00B25996 /* VerticalCollectionViewModel.swift */,
-			);
-			path = "View Model";
-			sourceTree = "<group>";
-		};
-		B2295FB62928FD5300B25996 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				B2295FB72928FD5300B25996 /* NumberModel.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		B2295FB92928FD6B00B25996 /* Managers */ = {
@@ -174,6 +156,7 @@
 		B22E82F02962B73B004AE891 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B2295FB72928FD5300B25996 /* NumberModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -181,6 +164,7 @@
 		B22E82F12962B763004AE891 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
+				B2295FB42928FD4B00B25996 /* VerticalCollectionViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
