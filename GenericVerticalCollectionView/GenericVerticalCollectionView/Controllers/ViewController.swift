@@ -8,6 +8,9 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    //MARK: - View Model
+    
     var viewModel = VerticalCollectionViewModel()
     
     //MARK: - Element
@@ -17,17 +20,19 @@ class ViewController: UIViewController {
         cell.configUI(model: self.viewModel.model.value[indexpath.row] , indexpath: indexpath)
     } selectHandler: { [weak self] (item, indexPath) in
         print(item)
+        let vc = SecondViewController()
+        self?.navigationController?.pushViewController(vc, animated: true)
     }
     
-    //MARK: - Life Cycle
+    //MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        title = "View Controller"
         request()
         view.addSubview(collectionView)
     }
-    
+        
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         collectionView.frame = view.bounds

@@ -11,7 +11,13 @@ class GameCollectionViewCell: UICollectionViewCell {
     
     static let identifier = "GameCollectionViewCell"
     
-    //MARK: Element
+    //MARK: - Public
+    
+    public func configUI (model:Number, indexpath:IndexPath) {
+        gameLabel.text = model.number
+    }
+    
+    //MARK: - Element
     
     private let gameLabel: UILabel = {
        
@@ -55,11 +61,10 @@ class GameCollectionViewCell: UICollectionViewCell {
     }()
 
     
-    //MARK: init
+    //MARK: - init
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         setView()
     }
     
@@ -72,7 +77,7 @@ class GameCollectionViewCell: UICollectionViewCell {
         setConstraints()
     }
     
-    //MARK: Set View & Autolayout
+    //MARK: - Set View & Autolayout
     
     private func setView () {
         self.backgroundColor = .lightGray
@@ -115,11 +120,5 @@ class GameCollectionViewCell: UICollectionViewCell {
         NSLayoutConstraint.activate(gameImageViewConstraints)
         NSLayoutConstraint.activate(cornerImageViewConstraints)
         NSLayoutConstraint.activate(buttonConstraints)
-    }
-    
-    //MARK: Public Function
-    
-    public func configUI (model:Number, indexpath:IndexPath) {
-        gameLabel.text = model.number
     }
 }
