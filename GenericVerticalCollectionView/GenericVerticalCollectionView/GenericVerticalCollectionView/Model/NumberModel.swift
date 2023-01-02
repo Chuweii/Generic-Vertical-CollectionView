@@ -8,5 +8,6 @@
 import Foundation
 
 struct Number {
-    var number : [String]
+    var number : String
 }
+

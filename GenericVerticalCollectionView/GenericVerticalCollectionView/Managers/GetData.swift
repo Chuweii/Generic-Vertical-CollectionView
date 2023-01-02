@@ -11,14 +11,16 @@ class GetData{
     
     static let shared = GetData()
     
-    func getNumber(completion:@escaping (Number) -> Void){
+    func getNumber(completion:@escaping ([Number]) -> Void){
     
-        var number = Number(number: [])
+        var number = [Number(number: "")]
         
         for i in 1...99{
-            number.number.append("\(i)")
+            number.append(Number(number: "\(i)"))
+            number.removeAll { number in
+                return number.number == ""
+            }
             completion(number)
         }
     }
-    
 }

@@ -18,6 +18,10 @@
 		B2295FBD2928FD6B00B25996 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2295FBB2928FD6B00B25996 /* Dynamic.swift */; };
 		B2295FBE2928FD6B00B25996 /* GetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2295FBC2928FD6B00B25996 /* GetData.swift */; };
 		B2295FC22929F6BF00B25996 /* GameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2295FC12929F6BF00B25996 /* GameCollectionViewCell.swift */; };
+		B22E82E72962AD54004AE891 /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22E82E62962AD54004AE891 /* UITableView+.swift */; };
+		B22E82E92962AD69004AE891 /* UICollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22E82E82962AD69004AE891 /* UICollectionView+.swift */; };
+		B22E82EB2962AD6F004AE891 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22E82EA2962AD6F004AE891 /* UIView+.swift */; };
+		B22E82ED2962AD76004AE891 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22E82EC2962AD76004AE891 /* UIColor+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		B2295FBB2928FD6B00B25996 /* Dynamic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
 		B2295FBC2928FD6B00B25996 /* GetData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetData.swift; sourceTree = "<group>"; };
 		B2295FC12929F6BF00B25996 /* GameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCollectionViewCell.swift; sourceTree = "<group>"; };
+		B22E82E62962AD54004AE891 /* UITableView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
+		B22E82E82962AD69004AE891 /* UICollectionView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+.swift"; sourceTree = "<group>"; };
+		B22E82EA2962AD6F004AE891 /* UIView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		B22E82EC2962AD76004AE891 /* UIColor+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +122,10 @@
 			isa = PBXGroup;
 			children = (
 				B2295FBB2928FD6B00B25996 /* Dynamic.swift */,
+				B22E82E62962AD54004AE891 /* UITableView+.swift */,
+				B22E82E82962AD69004AE891 /* UICollectionView+.swift */,
+				B22E82EA2962AD6F004AE891 /* UIView+.swift */,
+				B22E82EC2962AD76004AE891 /* UIColor+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -208,13 +220,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B22E82EB2962AD6F004AE891 /* UIView+.swift in Sources */,
 				B2295FB22928F6FB00B25996 /* GenericVerticalCollectionView.swift in Sources */,
 				B2295FB52928FD4B00B25996 /* VerticalCollectionViewModel.swift in Sources */,
+				B22E82E92962AD69004AE891 /* UICollectionView+.swift in Sources */,
 				B2295FBE2928FD6B00B25996 /* GetData.swift in Sources */,
+				B22E82E72962AD54004AE891 /* UITableView+.swift in Sources */,
 				B2295FB82928FD5300B25996 /* NumberModel.swift in Sources */,
 				B2295FBD2928FD6B00B25996 /* Dynamic.swift in Sources */,
 				B2295FC22929F6BF00B25996 /* GameCollectionViewCell.swift in Sources */,
 				B228D1052928F47300EC8F9F /* ViewController.swift in Sources */,
+				B22E82ED2962AD76004AE891 /* UIColor+.swift in Sources */,
 				B228D1012928F47300EC8F9F /* AppDelegate.swift in Sources */,
 				B228D1032928F47300EC8F9F /* SceneDelegate.swift in Sources */,
 			);

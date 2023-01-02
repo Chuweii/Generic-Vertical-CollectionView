@@ -9,13 +9,12 @@ import Foundation
 
 class VerticalCollectionViewModel{
     
-    var model = Number(number: [])
+    var model = Dynamic([Number]())
     
-    func fetchNumberData (completion: @escaping (Number) -> Void) {
-        GetData.shared.getNumber { number in
-            self.model = number
+    func fetchNumberData (completion: @escaping ([Number]) -> Void) {
+        GetData.shared.getNumber { [weak self] number in
+            self?.model.value = number
             completion(number)
         }
     }
-    
 }

@@ -19,7 +19,7 @@ class GameCollectionViewCell: UICollectionViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .systemFont(ofSize: 21, weight: .light)
         label.textAlignment = .center
-        label.text = "Weber"
+        label.text = ""
         
         return label
     }()
@@ -44,7 +44,7 @@ class GameCollectionViewCell: UICollectionViewCell {
         return image
     }()
     
-    private let button: UIButton = {
+     private lazy var button: UIButton = {
        
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -97,7 +97,6 @@ class GameCollectionViewCell: UICollectionViewCell {
             gameImageView.widthAnchor.constraint(equalToConstant: contentView.frame.size.width / 3 - 20),
             gameImageView.heightAnchor.constraint(equalToConstant: contentView.frame.size.width / 3 - 20)
         ]
-        // layout元件繼續
         let cornerImageViewConstraints = [
             cornerImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0),
             cornerImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 0),
@@ -120,8 +119,7 @@ class GameCollectionViewCell: UICollectionViewCell {
     
     //MARK: Public Function
     
-    public func configure (viewModel:VerticalCollectionViewModel, indexpath:IndexPath) {
-        gameLabel.text = viewModel.model.number[indexpath.row]
+    public func configUI (model:Number, indexpath:IndexPath) {
+        gameLabel.text = model.number
     }
-
 }
